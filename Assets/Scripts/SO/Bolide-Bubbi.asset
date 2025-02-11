@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f658f9949ad93594581e2acc7b2bbf04, type: 3}
   m_Name: Bolide-Bubbi
   m_EditorClassIdentifier: 
-  imageCar: {fileID: 21300000, guid: bdc646b247d8f0e43a44a4405a3d6989, type: 3}
-  prefab: {fileID: 1948821525999562, guid: 7b367dccc659de64b8c4d882ca0505fc, type: 3}
+  imageCar: {fileID: 21300000, guid: 11fdaebc2c26def428ef869dafbdab30, type: 3}
+  prefab: {fileID: 1654648867817274, guid: 8258fdccd226b584b8dc1c7ac1652db0, type: 3}
   modelName: Silverado 15 Hybrid 4WD
+  materials:
+  - {fileID: 2100000, guid: 707eb7b790aaa214bb421203de68536d, type: 2}
+  - {fileID: 2100000, guid: bff761b7e096ac849bedb4d802539ce6, type: 2}
+  - {fileID: 2100000, guid: 2408c7077c3256541945bfb35ac03ca5, type: 2}

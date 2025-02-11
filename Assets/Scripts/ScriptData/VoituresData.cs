@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
 
@@ -8,4 +9,5 @@ public class VoituresData : ScriptableObject
     public Sprite imageCar;
     public GameObject prefab;
     public string modelName;
+    public List<Material> materials;
 }

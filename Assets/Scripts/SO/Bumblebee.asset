@@ -15,3 +15,7 @@ MonoBehaviour:
   imageCar: {fileID: 21300000, guid: 7ed38baaa714dd048bfd59c76828d133, type: 3}
   prefab: {fileID: 3311311803080157842, guid: 133308cdb8794744caaef026bde9e1f0, type: 3}
   modelName: Outback AWD
+  materials:
+  - {fileID: 2100000, guid: 07f44fe3e9c462146a7769b976c50ec4, type: 2}
+  - {fileID: 2100000, guid: d2344366b80fe3d4f886ec412e0174fa, type: 2}
+  - {fileID: 2100000, guid: c4c2ee3e832cffd48bb9d156c2b21376, type: 2}
