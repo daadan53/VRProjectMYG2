@@ -17,5 +17,5 @@ MonoBehaviour:
   modelName: Silverado 15 Hybrid 4WD
   materials:
   - {fileID: 2100000, guid: 707eb7b790aaa214bb421203de68536d, type: 2}
-  - {fileID: 2100000, guid: bff761b7e096ac849bedb4d802539ce6, type: 2}
   - {fileID: 2100000, guid: 2408c7077c3256541945bfb35ac03ca5, type: 2}
+  - {fileID: 2100000, guid: a4e6922f48c28e645b166a6e87c82b19, type: 2}

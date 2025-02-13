@@ -1,10 +1,15 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private GameObject content;
     [SerializeField] private List<GameObject> buttonsList;
+
+    public InputActionAsset inputActions;
+    private InputAction menu;
+    [SerializeField] GameObject canvasStats;
     
     void Awake()
     {
@@ -18,6 +23,26 @@ public class GameManager : MonoBehaviour
                 buttonsList.Add(child.gameObject);
             }
         }
+    }
+
+    void Start()
+    {
+        menu = inputActions.FindActionMap("XRI Left Interaction").FindAction("Menu");
+        menu.Enable();
+        menu.started += OnMenuPressed;
+        menu.canceled += OnMenuReleased;
+
+        canvasStats.SetActive(false);
+    }
+
+    public void OnMenuPressed(InputAction.CallbackContext context)
+    {
+        canvasStats.SetActive(true);
+    }
+
+    private void OnMenuReleased(InputAction.CallbackContext context)
+    {
+        canvasStats.SetActive(false);
     }
 
     //Récuperer les données et les distribuer au bon bouton
@@ -35,5 +60,11 @@ public class GameManager : MonoBehaviour
                 }
             }
         }
+    }
+
+    void OnDestroy()
+    {
+        menu.started -= OnMenuPressed;
+        menu.canceled -= OnMenuReleased;
     }
 }

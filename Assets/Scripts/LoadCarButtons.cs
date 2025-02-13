@@ -24,6 +24,10 @@ public class LoadCarButtons : MonoBehaviour
     [SerializeField] private TextMeshProUGUI txtDescription;
     private Button button;
 
+    [SerializeField] private Button blueButton;
+    [SerializeField] private Button redButton;
+    [SerializeField] private Button blackButton;
+
     void Awake()
     {
         LoadPrefab();
@@ -53,6 +57,11 @@ public class LoadCarButtons : MonoBehaviour
         {
             Debug.LogError("Aucun composant Button n'a été trouvé sur cet objet");
         }
+
+        //On récupère les boutons de changement de material et on les assignes à l'event
+        blueButton.onClick.AddListener(() => ChangeMaterial(0));
+        redButton.onClick.AddListener(() => ChangeMaterial(1));
+        blackButton.onClick.AddListener(() => ChangeMaterial(2));
     }
 
     public void SetVehicleData(Vehicules vehicule)
@@ -64,6 +73,7 @@ public class LoadCarButtons : MonoBehaviour
         //Debug.Log($"Données assignées à {gameObject.name} : {description}");
     }
 
+    //Event au clique sur un des produits du catalogue
     public void OnClick()
     {
         if(spawnCar.transform.childCount > 0)
@@ -79,8 +89,6 @@ public class LoadCarButtons : MonoBehaviour
         canvasCatalogue.enabled = false;
 
         SetInfoOnCanvas();
-
-        //OnClickButton?.Invoke();
     }
 
     private void SetInfoOnCanvas()
@@ -92,5 +100,27 @@ public class LoadCarButtons : MonoBehaviour
     {
         canvasCatalogue.enabled = true;
         canvasCaract.SetActive(false);
+    }
+
+    // Event au clique sur les boutons de changement de couleurs
+    public void ChangeMaterial(int _materialIndex)
+    {
+        if (_materialIndex < 0 || _materialIndex >= voituresData.materials.Count)
+        {
+            Debug.LogWarning("Index de matériau invalide !");
+            return;
+        }
+
+        Renderer renderer = carModel.GetComponentInChildren<Renderer>();
+        if (renderer == null)
+        {
+            renderer = carModel.transform.GetChild(0).gameObject.GetComponentInChildren<Renderer>();
+            renderer.material = voituresData.materials[_materialIndex];
+        }
+        else
+        {
+            renderer.material = voituresData.materials[_materialIndex];
+        }
+        
     }
 }
