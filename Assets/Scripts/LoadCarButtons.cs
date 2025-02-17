@@ -15,11 +15,11 @@ public class LoadCarButtons : MonoBehaviour
     //Vignette du catalogue
     private TextMeshProUGUI txtCarName;
     private Image carImage;
-    private GameObject carModel;
+    [SerializeField] private GameObject carModel;
     [SerializeField] private GameObject spawnCar;
 
     //Canvas
-    [SerializeField] private GameObject canvasCaract;
+    [SerializeField] private Canvas canvasCaract;
     [SerializeField] private Canvas canvasCatalogue;
     [SerializeField] private TextMeshProUGUI txtDescription;
     private Button button;
@@ -62,6 +62,8 @@ public class LoadCarButtons : MonoBehaviour
         blueButton.onClick.AddListener(() => ChangeMaterial(0));
         redButton.onClick.AddListener(() => ChangeMaterial(1));
         blackButton.onClick.AddListener(() => ChangeMaterial(2));
+
+        canvasCaract.enabled = false;
     }
 
     public void SetVehicleData(Vehicules vehicule)
@@ -85,7 +87,7 @@ public class LoadCarButtons : MonoBehaviour
         carModel.transform.localPosition = Vector3.zero;
         carModel.transform.localScale = new Vector3(1,1,1);
 
-        canvasCaract.SetActive(true);
+        canvasCaract.enabled = true;
         canvasCatalogue.enabled = false;
 
         SetInfoOnCanvas();
@@ -99,28 +101,30 @@ public class LoadCarButtons : MonoBehaviour
     public void OnGoBack()
     {
         canvasCatalogue.enabled = true;
-        canvasCaract.SetActive(false);
+        canvasCaract.enabled = false;
     }
 
     // Event au clique sur les boutons de changement de couleurs
     public void ChangeMaterial(int _materialIndex)
     {
-        if (_materialIndex < 0 || _materialIndex >= voituresData.materials.Count)
+        if(carModel == spawnCar.transform.GetChild(0).gameObject)
         {
-            Debug.LogWarning("Index de matériau invalide !");
-            return;
-        }
+            if (_materialIndex < 0 || _materialIndex >= voituresData.materials.Count)
+            {
+                Debug.LogWarning("Index de matériau invalide !");
+                return;
+            }
 
-        Renderer renderer = carModel.GetComponentInChildren<Renderer>();
-        if (renderer == null)
-        {
-            renderer = carModel.transform.GetChild(0).gameObject.GetComponentInChildren<Renderer>();
-            renderer.material = voituresData.materials[_materialIndex];
+            Renderer renderer = spawnCar.transform.GetChild(0).gameObject.GetComponent<Renderer>();
+            if (renderer == null)
+            {
+                renderer = spawnCar.transform.GetChild(0).gameObject.GetComponentInChildren<Renderer>();
+                renderer.material = voituresData.materials[_materialIndex];
+            }
+            else
+            {
+                renderer.material = voituresData.materials[_materialIndex];
+            }
         }
-        else
-        {
-            renderer.material = voituresData.materials[_materialIndex];
-        }
-        
     }
 }

@@ -338,6 +338,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 6703942919109676015, guid: 120d7631bf5b4b94f8271411b1868e06, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1027,7 +1031,7 @@ GameObject:
   - component: {fileID: 134211798}
   - component: {fileID: 134211797}
   m_Layer: 0
-  m_Name: Button
+  m_Name: BackButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1840,8 +1844,8 @@ RectTransform:
   - {fileID: 9961229}
   m_Father: {fileID: 460639252}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.44767332}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2136,7 +2140,7 @@ GameObject:
   - component: {fileID: 411419457}
   m_Layer: 0
   m_Name: ButtonBlue
-  m_TagString: Untagged
+  m_TagString: MaterialButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3092,7 +3096,7 @@ GameObject:
   - component: {fileID: 664785311}
   - component: {fileID: 664785310}
   m_Layer: 5
-  m_Name: Content
+  m_Name: ContentDetails
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3116,7 +3120,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -0.00000834465, y: 0.0000054836273}
-  m_SizeDelta: {x: 0, y: 245.7}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &664785310
 MonoBehaviour:
@@ -3374,7 +3378,7 @@ GameObject:
   - component: {fileID: 710703000}
   m_Layer: 0
   m_Name: ButtonBlack
-  m_TagString: Untagged
+  m_TagString: MaterialButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3534,7 +3538,7 @@ GameObject:
   - component: {fileID: 800266674}
   - component: {fileID: 800266673}
   m_Layer: 5
-  m_Name: ButtonVoiture1 (2)
+  m_Name: ButtonVoiture3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3575,8 +3579,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   voituresData: {fileID: 11400000, guid: 66cf467bb236691458365317d3c8b30b, type: 2}
   modelName: 
+  carModel: {fileID: 0}
   spawnCar: {fileID: 453103519}
-  canvasCaract: {fileID: 1488326521}
+  canvasCaract: {fileID: 1488326526}
   canvasCatalogue: {fileID: 1842634330}
   txtDescription: {fileID: 861650170}
   blueButton: {fileID: 411419457}
@@ -3888,10 +3893,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 664785309}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 144.73625, y: -122.85}
-  m_SizeDelta: {x: 289.4725, y: 245.7}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 245.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &861650170
 MonoBehaviour:
@@ -4194,7 +4199,7 @@ GameObject:
   - component: {fileID: 909740559}
   - component: {fileID: 909740558}
   m_Layer: 5
-  m_Name: ButtonVoiture1 (1)
+  m_Name: ButtonVoiture2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4235,8 +4240,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   voituresData: {fileID: 11400000, guid: ce646d04ac65d2348b5f53848ebc34ff, type: 2}
   modelName: 
+  carModel: {fileID: 0}
   spawnCar: {fileID: 453103519}
-  canvasCaract: {fileID: 1488326521}
+  canvasCaract: {fileID: 1488326526}
   canvasCatalogue: {fileID: 1842634330}
   txtDescription: {fileID: 861650170}
   blueButton: {fileID: 411419457}
@@ -4338,7 +4344,7 @@ GameObject:
   - component: {fileID: 931277766}
   - component: {fileID: 931277765}
   m_Layer: 5
-  m_Name: ButtonVoiture1 (4)
+  m_Name: ButtonVoiture5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4379,8 +4385,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   voituresData: {fileID: 11400000, guid: 9fb217e3f7aa5f247a13f49ce6f7e581, type: 2}
   modelName: 
+  carModel: {fileID: 0}
   spawnCar: {fileID: 453103519}
-  canvasCaract: {fileID: 1488326521}
+  canvasCaract: {fileID: 1488326526}
   canvasCatalogue: {fileID: 1842634330}
   txtDescription: {fileID: 861650170}
   blueButton: {fileID: 411419457}
@@ -4653,7 +4660,7 @@ GameObject:
   - component: {fileID: 969383731}
   m_Layer: 0
   m_Name: ButtonRed
-  m_TagString: Untagged
+  m_TagString: MaterialButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5756,6 +5763,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 6703942919109676015, guid: 120d7631bf5b4b94f8271411b1868e06, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6246,7 +6257,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1488326522
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6363,7 +6374,7 @@ GameObject:
   - component: {fileID: 1499591744}
   - component: {fileID: 1499591743}
   m_Layer: 5
-  m_Name: ButtonVoiture1 (3)
+  m_Name: ButtonVoiture4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6404,8 +6415,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   voituresData: {fileID: 11400000, guid: ff7c3b0f8babf784f949f0d4f876ea2f, type: 2}
   modelName: 
+  carModel: {fileID: 0}
   spawnCar: {fileID: 453103519}
-  canvasCaract: {fileID: 1488326521}
+  canvasCaract: {fileID: 1488326526}
   canvasCatalogue: {fileID: 1842634330}
   txtDescription: {fileID: 861650170}
   blueButton: {fileID: 411419457}
@@ -8970,8 +8982,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   voituresData: {fileID: 11400000, guid: 7d40600512483784ab4dc2b896a9c0dc, type: 2}
   modelName: 
+  carModel: {fileID: 0}
   spawnCar: {fileID: 453103519}
-  canvasCaract: {fileID: 1488326521}
+  canvasCaract: {fileID: 1488326526}
   canvasCatalogue: {fileID: 1842634330}
   txtDescription: {fileID: 861650170}
   blueButton: {fileID: 411419457}

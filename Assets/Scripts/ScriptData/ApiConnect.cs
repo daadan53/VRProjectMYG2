@@ -41,7 +41,7 @@ public class Vehicules
     public int cylinders;
     public string fueltype1;
     public int fuelcost08;
-    public string year;
+    public int year;
     public string trany;
 }
 
