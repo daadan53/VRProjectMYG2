@@ -5,7 +5,7 @@ using UnityEngine.Networking;
 
 public static class JSonHelper
 {
-    [System.Serializable]
+    [Serializable]
     private class Wrapper<T>
     {
         public T[] results;
