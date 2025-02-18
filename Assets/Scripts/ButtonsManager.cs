@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LoadCarButtons : MonoBehaviour
+public class ButtonsManager : MonoBehaviour
 {
     public VoituresData voituresData;
 

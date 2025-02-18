@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f658f9949ad93594581e2acc7b2bbf04, type: 3}
   m_Name: Bumblebee
   m_EditorClassIdentifier: 
-  imageCar: {fileID: 21300000, guid: 7ed38baaa714dd048bfd59c76828d133, type: 3}
-  prefab: {fileID: 3311311803080157842, guid: 133308cdb8794744caaef026bde9e1f0, type: 3}
-  modelName: Outback AWD
-  materials:
+  ImageCar: {fileID: 21300000, guid: 7ed38baaa714dd048bfd59c76828d133, type: 3}
+  Prefab: {fileID: 3311311803080157842, guid: 133308cdb8794744caaef026bde9e1f0, type: 3}
+  ModelName: Rio
+  Materials:
   - {fileID: 2100000, guid: d2344366b80fe3d4f886ec412e0174fa, type: 2}
   - {fileID: 2100000, guid: c4c2ee3e832cffd48bb9d156c2b21376, type: 2}
   - {fileID: 2100000, guid: 104696f8b5f23d24586d858b68916bdc, type: 2}

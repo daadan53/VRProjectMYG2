@@ -5,8 +5,13 @@ using UnityEngine;
 public class VoituresData : ScriptableObject
 {
     //Image de la vignette du catalogue
-    public Sprite imageCar;
-    public GameObject prefab;
-    public string modelName;
-    public List<Material> materials;
+    [SerializeField] private Sprite ImageCar;
+    public Sprite imageCar => ImageCar;
+    [SerializeField] private GameObject Prefab;
+    public GameObject prefab => Prefab;
+
+    [SerializeField] private string ModelName;
+    public string modelName => ModelName;
+    [SerializeField] private List<Material> Materials;
+    public List<Material> materials => Materials;
 }

@@ -52,7 +52,7 @@ public class GameManager : MonoBehaviour
         {
             foreach (var button in buttonsList)
             {
-                LoadCarButtons loadCarButton = button.GetComponent<LoadCarButtons>();
+                ButtonsManager loadCarButton = button.GetComponent<ButtonsManager>();
 
                 if (loadCarButton != null && loadCarButton.modelName == vehicule.model)
                 {

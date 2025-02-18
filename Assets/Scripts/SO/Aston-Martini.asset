@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f658f9949ad93594581e2acc7b2bbf04, type: 3}
   m_Name: Aston-Martini
   m_EditorClassIdentifier: 
-  imageCar: {fileID: 21300000, guid: 70bcacefb6741da4bb27f6735691d1c4, type: 3}
-  prefab: {fileID: 1740865480142414, guid: 663342408c5e6e24f8e0cb584631c6ad, type: 3}
-  modelName: Escape FWD
-  materials:
+  ImageCar: {fileID: 21300000, guid: 70bcacefb6741da4bb27f6735691d1c4, type: 3}
+  Prefab: {fileID: 1740865480142414, guid: 663342408c5e6e24f8e0cb584631c6ad, type: 3}
+  ModelName: Escape FWD
+  Materials:
   - {fileID: 2100000, guid: 9d52757b5149f364db7b49be4d33c5b2, type: 2}
   - {fileID: 2100000, guid: 21650591fb6286b4293be426dc0621bf, type: 2}
   - {fileID: 2100000, guid: ccd77042b04a3d84b91af0d9d68ea643, type: 2}
